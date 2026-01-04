@@ -15,7 +15,6 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      * ┌─────┬─────┬─────┬─────┬─────┐
      * │  1  │  2  │  3  │  4  │ ENC │
      * └─────┴─────┴─────┴─────┴─────┘
-     * Keys 1-4 are macro keys, ENC is encoder push
      */
     [_BASE] = LAYOUT(
         KC_F13,  KC_F14,  KC_F15,  KC_F16,  MO(_FUNC)
@@ -28,7 +27,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      * └─────┴─────┴─────┴─────┴─────┘
      */
     [_FUNC] = LAYOUT(
-        RGB_TOG, RGB_MOD, RGB_RMOD, QK_BOOT, _______
+        QK_RGBLIGHT_TOGGLE, QK_RGBLIGHT_MODE_NEXT, QK_RGBLIGHT_MODE_PREVIOUS, QK_BOOT, _______
     )
 };
 
