@@ -97,9 +97,6 @@ static void render_status(void) {
     } else {
         oled_write_P(PSTR("OFF\n"), false);
     }
-
-    // WPM
-    oled_write_P(PSTR("Cyrenepad v1.0"), false);
 }
 
 bool oled_task_kb(void) {
@@ -112,7 +109,7 @@ bool oled_task_kb(void) {
 }
 
 oled_rotation_t oled_init_kb(oled_rotation_t rotation) {
-    return OLED_ROTATION_180;  // adjust later?
+    return OLED_ROTATION_180;
 }
 
 #endif // OLED_ENABLE

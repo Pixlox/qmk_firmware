@@ -18,7 +18,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     ),
 
     /*
-     * Function Layer (held via encoder push)
+     * Func Layer
      * ┌─────┬─────┬─────┬─────┬─────┐
      * │RGBTG│RGB+ │RGB- │BOOT │     │
      * └─────┴─────┴─────┴─────┴─────┘
@@ -28,19 +28,19 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     )
 };
 
-// Encoder rotation handling
+// Encoder handling
 #ifdef ENCODER_ENABLE
 bool encoder_update_user(uint8_t index, bool clockwise) {
     if (index == 0) {
         if (layer_state_is(_FUNC)) {
-            // In function layer: adjust RGB brightness
+            // In func layer, adjust led brightness
             if (clockwise) {
                 rgblight_increase_val();
             } else {
                 rgblight_decrease_val();
             }
         } else {
-            // In base layer: volume control
+            // In base layer, volume control
             if (clockwise) {
                 tap_code(KC_VOLU);
             } else {
