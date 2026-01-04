@@ -1,6 +1,3 @@
-// Copyright 2024 Pixlox
-// SPDX-License-Identifier: GPL-2.0-or-later
-
 #include QMK_KEYBOARD_H
 
 // Layer definitions
@@ -27,7 +24,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      * └─────┴─────┴─────┴─────┴─────┘
      */
     [_FUNC] = LAYOUT(
-        QK_RGBLIGHT_TOGGLE, QK_RGBLIGHT_MODE_NEXT, QK_RGBLIGHT_MODE_PREVIOUS, QK_BOOT, _______
+        RM_TOGG, RM_NEXT, RM_PREV, QK_BOOT, _______
     )
 };
 
