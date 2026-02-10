@@ -34,7 +34,7 @@
         }
     },
     "ws2812": {
-        "pin": "GP6",
+        "pin": "GP4",
         "driver": "vendor"
     },
     "url": "https://github.com/Pixlox/qmk_firmware",
